@@ -1,39 +1,55 @@
 {
-    "type": "project",
+    "name": "rbrauner/rafalbrauner",
+    "description": "rafalbrauner.com",
     "license": "proprietary",
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rafał Brauner",
+            "email": "rafalbrauner@gmail.com"
+        }
+    ],
     "require": {
-        "php": ">=8.2",
+        "php": "^8.4",
+        "ext-bcmath": "*",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/console": "7.4.*",
-        "symfony/dotenv": "7.4.*",
-        "symfony/flex": "^2",
-        "symfony/framework-bundle": "7.4.*",
-        "symfony/runtime": "7.4.*",
-        "symfony/yaml": "7.4.*"
+        "ext-intl": "*",
+        "composer/composer": "^2.9.2",
+        "doctrine/doctrine-bundle": "^3.1",
+        "doctrine/doctrine-migrations-bundle": "^4.0",
+        "doctrine/orm": "^3.5.8",
+        "pentatrion/vite-bundle": "^8.2.3",
+        "symfony/asset": "^7.4",
+        "symfony/console": "^7.4.1",
+        "symfony/dotenv": "^7.4.0",
+        "symfony/flex": "^2.10",
+        "symfony/framework-bundle": "^7.4.1",
+        "symfony/monolog-bundle": "^4.0",
+        "symfony/runtime": "^7.4.1",
+        "symfony/translation": "^7.4",
+        "symfony/twig-bundle": "^7.4",
+        "symfony/yaml": "^7.4.1"
     },
     "require-dev": {
-    },
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true,
-            "symfony/flex": true,
-            "symfony/runtime": true
-        },
-        "bump-after-update": true,
-        "sort-packages": true
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Tests\\": "tests/"
-        }
+        "enlightn/security-checker": "^2.0",
+        "ergebnis/composer-normalize": "^2.48.2",
+        "maglnet/composer-require-checker": "^4.19",
+        "php-cs-fixer/shim": "^3.91.3",
+        "phpstan/extension-installer": "^1.4.3",
+        "phpstan/phpstan": "^2.1.33",
+        "phpstan/phpstan-doctrine": "^2.0.12",
+        "phpstan/phpstan-phpunit": "^2.0.10",
+        "phpstan/phpstan-symfony": "^2.0.9",
+        "phpunit/phpunit": "^12.5.1",
+        "rector/rector": "^2.2.11",
+        "roave/security-advisories": "dev-latest",
+        "symfony/browser-kit": "^7.4.0",
+        "symfony/css-selector": "^7.4.0",
+        "symfony/maker-bundle": "^1.65.1",
+        "symfony/stopwatch": "^7.4",
+        "symfony/var-dumper": "^7.4",
+        "symfony/web-profiler-bundle": "^7.4"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
@@ -45,25 +61,49 @@
         "symfony/polyfill-php81": "*",
         "symfony/polyfill-php82": "*"
     },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "symfony/flex": true,
+            "symfony/runtime": true
         },
+        "bump-after-update": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "docker": true,
+            "require": "^7.4"
+        }
+    },
+    "scripts": {
         "post-install-cmd": [
             "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
-    },
-    "conflict": {
-        "symfony/symfony": "*"
-    },
-    "extra": {
-        "symfony": {
-            "allow-contrib": false,
-            "require": "7.4.*"
+        ],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         }
     }
 }

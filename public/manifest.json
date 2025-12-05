@@ -1,0 +1,57 @@
+{
+    "background_color": "#ffffff",
+    "theme_color": "#bd5d38",
+    "name": "Rafał Brauner - Backend Developer",
+    "short_name": "rafal-brauner-backend-developer",
+    "id": "/?manifest=1",
+    "description": "Rafał Brauner - Backend Developer portfolio",
+    "orientation": "any",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "categories": ["developer", "portfolio", "backend"],
+    "icons": [
+        {
+            "src": "/build/img/icons/android-chrome-192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/build/img/icons/android-chrome-512x512.png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/build/img/icons/android-chrome-maskable-192x192.png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/build/img/icons/android-chrome-maskable-512x512.png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/build/img/icons/apple-touch-icon-60x60.png",
+            "sizes": "60x60"
+        },
+        {
+            "src": "/build/img/icons/apple-touch-icon-76x76.png",
+            "sizes": "76x76"
+        },
+        {
+            "src": "/build/img/icons/apple-touch-icon-120x120.png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "/build/img/icons/apple-touch-icon-180x180.png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "/build/img/icons/apple-touch-icon.png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "/build/img/icons/mstile-150x150.png",
+            "sizes": "150x150"
+        }
+    ]
+}
