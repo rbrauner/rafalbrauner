@@ -1,3 +1,5 @@
-import "../css/app.css";
+import "@/css/main.css";
 
-console.log("Happy coding !!");
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Happy coding !!");
+});

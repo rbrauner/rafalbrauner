@@ -1,22 +1,32 @@
-import {defineConfig} from "vite";
+import { defineConfig } from "vite";
 import symfonyPlugin from "vite-plugin-symfony";
 import tailwindcss from "@tailwindcss/vite";
-
-/* if you're using React */
-// import react from '@vitejs/plugin-react';
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
     plugins: [
-        /* react(), // if you're using React */
         symfonyPlugin(),
         tailwindcss(),
+        viteStaticCopy({
+            targets: [
+                {
+                    src: "assets/img",
+                    dest: "",
+                },
+            ],
+        }),
     ],
     build: {
         rollupOptions: {
             input: {
-                app: "./assets/ts/app.ts"
+                app: "./assets/ts/app.ts",
             },
-        }
+            output: {
+                entryFileNames: (chunk: { name: string }): string => {
+                    return "assets/[name].[hash].js";
+                },
+            },
+        },
     },
     server: {
         host: "0.0.0.0",
