@@ -4,7 +4,7 @@
 $env = getenv('ENV') ?: 'dev';
 
 if ($env === 'dev') {
-    echo "> Initializing development environment...\n";
+    echo "> Initializing dev environment...\n";
     echo "> Press Enter to continue...";
     fgets(STDIN);
 
@@ -36,41 +36,11 @@ if ($env === 'dev') {
     // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"');
     // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"');
 
-    echo "> Development environment initialized successfully!\n";
+    echo "> Dev environment initialized successfully!\n";
 } elseif ($env === 'prod') {
-    echo "> Initializing production environment...\n";
-    echo "> Press Enter to continue...";
-    fgets(STDIN);
-
-    if (!file_exists('.env')) {
-        echo "> Creating \".env\" file from \".env.example-prod\"...\n";
-        copy('.env.example-prod', '.env');
-    } else {
-        echo "> \".env\" file already exists. Skipping creation...\n";
-    }
-
-    if (!file_exists('compose.yaml')) {
-        echo "> Creating \"compose.yaml\" from \"compose.example-prod.yaml\"...\n";
-        copy('compose.example-prod.yaml', 'compose.yaml');
-    } else {
-        echo "> \"compose.yaml\" file already exists. Skipping creation...\n";
-    }
-
-    echo "> Check the created files + create docker network (ex. \"docker network create main\") and press Enter to continue...";
-    fgets(STDIN);
-
-    echo "> Starting Docker containers...\n";
-    exec('docker compose up -d');
-
-    echo "> Installing PHP dependencies using Composer...\n";
-    exec('docker compose exec -it php bash -c "APP_ENV=prod composer install --no-ansi --no-dev --no-interaction --no-plugins --no-progress --no-scripts --optimize-autoloader"');
-
-    // echo "> Creating database, running migrations and loading fixtures...\n";
-    // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:database:create --if-not-exists"');
-    // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"');
-    // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"');
-
-    echo "> Production environment initialized successfully!\n";
+    echo "> Initializing prod environment...\n";
+    echo "> Nothing to do...";
+    echo "> Prod environment initialized successfully!\n";
 } else {
     echo "> Unknown environment: $env\n";
     exit(1);
