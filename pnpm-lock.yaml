@@ -8,6 +8,12 @@ importers:
 
   .:
     devDependencies:
+      '@tsconfig/recommended':
+        specifier: ^1.0.13
+        version: 1.0.13
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
       vite:
         specifier: ^6.4.1
         version: 6.4.1
@@ -298,6 +304,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@tsconfig/recommended@1.0.13':
+    resolution: {integrity: sha512-sySRuBfMKyKO/j2ZAhR8kSembhjuPEV4Ra3AHtmWLq51+iGaudr45crPSzNC5b7/Ctrh9dfUpBuTlYrH6rM58Q==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -429,6 +438,11 @@ packages:
   totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   vite-plugin-symfony@8.2.3:
     resolution: {integrity: sha512-gpCcA8Y5/M6ZORo3SyDcvuRLZyC3tAzSqPVDySA/XRwrGgljQCSLbMsOA5VDoW6BcVWumEKoXnTB8GcHGiVVqA==}
@@ -635,6 +649,8 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
+  '@tsconfig/recommended@1.0.13': {}
+
   '@types/estree@1.0.8': {}
 
   braces@3.0.3:
@@ -788,6 +804,8 @@ snapshots:
       is-number: 7.0.0
 
   totalist@3.0.1: {}
+
+  typescript@5.9.3: {}
 
   vite-plugin-symfony@8.2.3(vite@6.4.1):
     dependencies:

@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
 import symfonyPlugin from "vite-plugin-symfony";
 
 /* if you're using React */
@@ -12,7 +12,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                app: "./assets/app.js"
+                app: "./assets/ts/app.ts"
             },
         }
     },
