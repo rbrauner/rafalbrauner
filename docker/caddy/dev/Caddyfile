@@ -20,3 +20,7 @@
     }
     file_server
 }
+
+:5173 {
+    reverse_proxy rafalbrauner-node:5173
+}
