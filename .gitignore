@@ -634,7 +634,6 @@ phpstan.neon
 ###< pentatrion/vite-bundle ###
 
 ###> rbrauner/rafalbrauner ###
-/!bin/deploy
 /!bin/init
 /.env
 /.idea
