@@ -8,8 +8,6 @@
 - PHP extensions (install all to satisfy `symfony check:requirements`)
 - Composer ^2
 
-### TODO
-
 ## Dev
 
 ### Requirements
@@ -54,3 +52,8 @@ docker compose stop
 - `make php-test-integration` - run integration tests
 - `make php-doctrine-migrations-migrate` - migrate database
 - `make php-prepare-database ENV="test"` - prepare database for given environment
+
+
+## Prod
+
+WIP
