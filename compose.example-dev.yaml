@@ -52,6 +52,30 @@ services:
             - home:/home/${USER:-app}
             - .:/var/www/html
 
+    node:
+        container_name: rafalbrauner-node
+        build:
+            context: .
+            dockerfile: ./docker/node/Dockerfile
+            target: dev
+            network: host
+            args:
+                TZ: ${TZ:-Europe/Warsaw}
+                USER: ${APP_USER:-app}
+                GROUP: ${APP_GROUP:-app}
+                UID: ${UID:-1000}
+                GID: ${GID:-1000}
+        command: /var/www/html/docker/node/dev/startup.sh
+        restart: unless-stopped
+        working_dir: /var/www/html
+        user: "${UID:-1000}:${GID:-1000}"
+        tty: true
+        networks:
+            main:
+        volumes:
+            - home:/home/${USER:-app}
+            - .:/var/www/html
+
     change-volume-ownership:
         container_name: rafalbrauner-change-volume-ownership
         image: alpine
