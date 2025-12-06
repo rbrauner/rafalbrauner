@@ -65,10 +65,13 @@ php-test-single:
 php-doctrine-migrations-migrate:
 	docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"
 
+php-doctrine-fixtures-load:
+	docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"
+
 # ex. ENV="test"
 php-prepare-database:
 	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:database:drop --force --if-exists"
-	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:database:create --if-not-exists"
+	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:database:create"
 	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"
 	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"
 
