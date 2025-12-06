@@ -629,4 +629,10 @@ phpstan.neon
 ###< phpunit/phpunit ###
 
 ###> rbrauner/rafalbrauner ###
+/!bin/deploy
+/!bin/init
+/.env
+/.idea
+/compose.yaml
+/Makefile.local.mk
 ###< rbrauner/rafalbrauner ###

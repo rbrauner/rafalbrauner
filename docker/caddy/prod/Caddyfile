@@ -1,0 +1,21 @@
+{
+    admin off
+    auto_https off
+}
+
+:80 {
+    root * /var/www/html/public
+    encode gzip
+    php_fastcgi rafalbrauner-php:9000
+    file_server
+}
+
+:443 {
+    root * /var/www/html/public
+    encode gzip
+    php_fastcgi rafalbrauner-php:9000 {
+        header_up X-Forwarded-Proto "https"
+        env HTTPS on
+    }
+    file_server
+}

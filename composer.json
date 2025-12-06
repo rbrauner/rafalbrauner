@@ -76,7 +76,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.4.*"
+            "require": "^7.4"
         }
     },
     "scripts": {

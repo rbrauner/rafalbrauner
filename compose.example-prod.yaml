@@ -1,0 +1,74 @@
+services:
+    caddy:
+        container_name: rafalbrauner-caddy
+        image: caddy:alpine
+        restart: unless-stopped
+        working_dir: /var/www/html
+        # user: "${UID:-1000}:${GID:-1000}"
+        networks:
+            main:
+        volumes:
+            - caddy-data:/data
+            - caddy-config:/config
+            # - home:/home/${USER:-app}
+            - .:/var/www/html
+            - ./docker/caddy/prod/Caddyfile:/etc/caddy/Caddyfile
+        labels:
+            traefik.enable: true
+            traefik.http.services.rafalbrauner.loadbalancer.server.port: 80
+            traefik.http.services.rafalbrauner-secure.loadbalancer.server.port: 443
+            traefik.http.routers.rafalbrauner.rule: Host(`${DOMAIN:-rafalbrauner.com}`)
+            traefik.http.routers.rafalbrauner.entrypoints: http
+            traefik.http.routers.rafalbrauner.tls: false
+            traefik.http.routers.rafalbrauner.service: rafalbrauner
+            traefik.http.routers.rafalbrauner-secure.rule: Host(`${DOMAIN:-rafalbrauner.com}`)
+            traefik.http.routers.rafalbrauner-secure.entrypoints: https
+            traefik.http.routers.rafalbrauner-secure.tls: true
+            traefik.http.routers.rafalbrauner-secure.service: rafalbrauner-secure
+
+    php:
+        container_name: rafalbrauner-php
+        build:
+            context: .
+            dockerfile: ./docker/php/Dockerfile
+            target: prod
+            network: host
+            args:
+                TZ: ${TZ:-Europe/Warsaw}
+                USER: ${USER:-app}
+                GROUP: ${GROUP:-app}
+                UID: ${UID:-1000}
+                GID: ${GID:-1000}
+        restart: unless-stopped
+        working_dir: /var/www/html
+        user: "${UID:-1000}:${GID:-1000}"
+        networks:
+            main:
+        volumes:
+            - home:/home/${USER:-app}
+            - .:/var/www/html
+
+    change-volume-ownership:
+        container_name: rafalbrauner-change-volume-ownership
+        image: alpine
+        command: chown -R ${UID:-1000}:${GID:-1000} /home/${USER:-app}
+        restart: no
+        user: root
+        group_add:
+            - ${GID:-1000}
+        networks:
+            - main
+        volumes:
+            - home:/home/${USER:-app}
+
+networks:
+    main:
+        external: true
+
+volumes:
+    home:
+        name: rafalbrauner-home
+    caddy-data:
+        name: rafalbrauner-caddy-data
+    caddy-config:
+        name: rafalbrauner-caddy-config
