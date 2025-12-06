@@ -1,5 +1,5 @@
 {
-    "include": ["assets/**/*.ts", "assets/**/*.tsx"],
+    "include": ["assets/**/*.ts", "assets/**/*.tsx", "assets/**/*.vue"],
     "exclude": ["node_modules"],
     "compilerOptions": {
         // modules and imports
