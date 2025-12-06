@@ -1,6 +1,10 @@
 <?php
 
-// This file is auto-generated and is for apps only. Bundles SHOULD NOT rely on its content.
+declare(strict_types=1);
+
+/**
+ * Copyright (C) Rafał Brauner
+ */
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
