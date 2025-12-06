@@ -19,10 +19,10 @@ php-enter:
 php-exec:
 	docker compose exec -it php bash -c "$(COMMAND)"
 
-php-composer-install:
+php-install:
 	docker compose exec -it php bash -c "composer install"
 
-php-composer-update:
+php-update:
 	docker compose exec -it php bash -c "composer update"
 
 php-composer-normalize:
@@ -71,6 +71,25 @@ php-prepare-database:
 	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:database:create --if-not-exists"
 	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"
 	docker compose exec -it php bash -c "APP_ENV=$(ENV) php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"
+
+node-enter:
+	docker compose exec -it node bash
+
+# ex. COMMAND="php -v"
+node-exec:
+	docker compose exec -it node bash -c "$(COMMAND)"
+
+node-install:
+	docker compose exec -it node bash -c "pnpm install"
+
+node-update:
+	docker compose exec -it node bash -c "pnpm update"
+
+node-run-dev:
+	docker compose exec -it node bash -c "pnpm run dev"
+
+node-run-prod:
+	docker compose exec -it node bash -c "pnpm run prod"
 
 # ===========
 # = include =

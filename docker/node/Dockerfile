@@ -6,7 +6,14 @@ RUN apk upgrade
 RUN apk add bash tzdata git vim findutils
 RUN apk cache clean
 
-FROM packages AS environments
+FROM packages AS pnpm
+RUN npm install -g pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN mkdir -p $PNPM_HOME
+RUN pnpm config set store-dir $PNPM_HOME/.pnpm-store
+
+FROM pnpm AS environments
 # args and envs
 ARG TZ="Europe/Warsaw"
 ARG USER="app"
@@ -25,9 +32,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
 RUN mkdir -p /var/www/html
 # make `/var/www/html` safe for git operations
 RUN git config --global --add safe.directory /var/www/html
-# create user and group for app
-RUN addgroup -g $GID -S $USER
-RUN adduser -u $UID -D -S -G $GROUP $USER
+RUN chown -R $UID:$GID $PNPM_HOME
 
 FROM configs AS dev
 
