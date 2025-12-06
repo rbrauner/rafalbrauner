@@ -17,6 +17,7 @@
         "doctrine/doctrine-bundle": "^3.1",
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.5",
+        "pentatrion/vite-bundle": "^8.2",
         "symfony/console": "^7.4.0",
         "symfony/dotenv": "^7.4.0",
         "symfony/flex": "^2.10",
