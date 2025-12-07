@@ -1,0 +1,35 @@
+{
+    "include": ["assets/**/*.ts", "assets/**/*.tsx", "assets/**/*.vue"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        // modules and imports
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "verbatimModuleSyntax": true,
+        // code quality
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        // environment and libraries
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "types": ["vite/client"],
+        "resolveJsonModule": true,
+        // paths
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["assets/*"]
+        },
+        // build
+        "target": "ESNext",
+        "sourceMap": true,
+        "useDefineForClassFields": true,
+        "jsx": "preserve",
+        // optimization
+        "skipLibCheck": true,
+        "isolatedModules": true
+    }
+}

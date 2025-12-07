@@ -1,0 +1,20 @@
+parameters:
+    level: 10
+    parallel:
+        maximumNumberOfProcesses: 0
+    paths:
+        - bin/
+        - config/
+        - migrations/
+        - public/
+        - src/
+        - tests/
+    excludePaths:
+        - var/
+        - vendor/
+    symfony:
+        containerXmlPath: var/cache/dev/App_KernelDevDebugContainer.xml
+    scanDirectories:
+        - var/cache/dev/Symfony/Config
+    scanFiles:
+        - vendor/symfony/dependency-injection/Loader/Configurator/ContainerConfigurator.php
