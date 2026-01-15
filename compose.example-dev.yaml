@@ -16,11 +16,11 @@ services:
         working_dir: /var/www/html
         # user: "${UID:-1000}:${GID:-1000}"
         networks:
-            main:
+            shared-network:
         volumes:
             - caddy-data:/data
             - caddy-config:/config
-            # - home:/home/${USER:-app}
+            # - shared-home:/home/${APP_USER:-app}
             - .:/var/www/html
             - ./docker/caddy/dev/Caddyfile:/etc/caddy/Caddyfile
         labels:
@@ -60,9 +60,9 @@ services:
         # environment:
         #     XDEBUG_SESSION: 1
         networks:
-            main:
+            shared-network:
         volumes:
-            - home:/home/${USER:-app}
+            - shared-home:/home/${APP_USER:-app}
             - .:/var/www/html
             - ./docker/php/dev/php.ini:/usr/local/etc/php/php.ini
 
@@ -84,32 +84,21 @@ services:
         user: "${UID:-1000}:${GID:-1000}"
         tty: true
         networks:
-            main:
+            shared-network:
         volumes:
-            - home:/home/${USER:-app}
+            - shared-home:/home/${APP_USER:-app}
             - .:/var/www/html
             - ./docker/node/dev/startup.sh:/usr/local/bin/startup.sh
 
-    change-volume-ownership:
-        container_name: rafalbrauner-change-volume-ownership
-        image: alpine
-        command: chown -R ${UID:-1000}:${GID:-1000} /home/${USER:-app}
-        restart: no
-        user: root
-        group_add:
-            - ${GID:-1000}
-        networks:
-            - main
-        volumes:
-            - home:/home/${USER:-app}
-
 networks:
-    main:
+    shared-network:
+        name: ${SHARED_NETWORK_NAME:-shared-network}
         external: true
 
 volumes:
-    home:
-        name: rafalbrauner-home
+    shared-home:
+        name: ${SHARED_HOME_VOLUME:-shared-home}
+        external: true
     caddy-data:
         name: rafalbrauner-caddy-data
     caddy-config:
