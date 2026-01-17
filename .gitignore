@@ -638,5 +638,4 @@ phpstan.neon
 /.env
 /.idea
 /compose.yaml
-/Makefile.local.mk
 ###< rbrauner/rafalbrauner ###

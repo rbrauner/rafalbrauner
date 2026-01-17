@@ -18,7 +18,7 @@
 
 1. Clone repository: `git clone git@github.com:rbrauner/rafalbrauner.git`
 2. Enter project folder: `cd rafalbrauner`
-3. Run `make init`
+3. Run `just init`
 
 ### Run
 
@@ -38,30 +38,7 @@ docker compose stop
 
 - `docker compose start` - start containers
 - `docker compose stop` - start containers
-- `make php-enter` - enter php container
-- `make php-exec COMMAND="php -v"` - execute command in php container
-- `make php-install` - install php dependencies
-- `make php-update` - update php dependencies
-- `make php-composer-normalize` - normalize composer.json
-- `make php-clear` - clear cache and logs
-- `make php-clear-cache` - clear cache
-- `make php-clear-logs` - clear logs
-- `make php-check` - check code
-- `make php-check-security` - check security
-- `make php-fix` - fix code
-- `make php-test-all` - run tests
-- `make php-test-unit` - run unit tests
-- `make php-test-integration` - run integration tests
-- `make php-doctrine-migrations-migrate` - migrate database
-- `make php-doctrine-fixtures-load` - load fixtures
-- `make php-prepare-database ENV="test"` - prepare database for given environment
-- `make node-enter` - enter node container
-- `make node-exec COMMAND="npm -v"` - execute command in node container
-- `make node-install` - install node dependencies
-- `make node-update` - update node dependencies
-- `make node-run-dev` - run dev server
-- `make node-build` - build assets
-- `make node-run-ssr-serve` - run ssr server
+- `just --list` - list tasks
 
 ## Prod
 
