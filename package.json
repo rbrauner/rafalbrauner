@@ -12,17 +12,17 @@
         "ssr:serve": "node var/node/ssr.js"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.1.17",
-        "@types/node": "^24.10.1",
-        "@vitejs/plugin-vue": "^6.0.2",
+        "@tailwindcss/vite": "^4.1.18",
+        "@types/node": "^24.10.9",
+        "@vitejs/plugin-vue": "^6.0.3",
         "express": "^5.2.1",
-        "prettier": "^3.7.4",
-        "tailwindcss": "^4.1.17",
+        "prettier": "^3.8.0",
+        "tailwindcss": "^4.1.18",
         "typescript": "^5.9.3",
         "vite": "^6.4.1",
         "vite-plugin-symfony": "^8.2.3",
         "vite-tsconfig-paths": "^5.1.4",
-        "vue": "^3.5.25"
+        "vue": "^3.5.26"
     },
     "engines": {
         "node": "^24.11",
