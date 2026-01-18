@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    {% include 'components/hero.html.twig' %}
+    {% include 'components/experience.html.twig' %}
+    {% include 'components/education.html.twig' %}
+    {% include 'components/skills.html.twig' %}
+    {% include 'components/interests.html.twig' %}
+    {% include 'components/awards.html.twig' %}
+    {% include 'components/contact_form.html.twig' with {'contactForm': contactForm} %}
+{% endblock %}

@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: theme('colors.gray.100');
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: theme('colors.gray.900');
+}
+
+::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.400');
+    border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.600');
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gray.500');
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gray.500');
+}
+
+/* Section scroll padding for fixed navbar */
+section {
+    scroll-margin-top: 4rem;
+}

@@ -1,0 +1,155 @@
+meta:
+    title: Rafał Brauner - Backend Developer
+    description: Rafał Brauner - Backend Developer portfolio. PHP, Symfony, MySQL, Docker.
+    keywords: Backend Developer, PHP, Symfony, MySQL, Portfolio, Kraków
+    author: Rafał Brauner
+
+component:
+    cookies_banner:
+        text: Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
+        button: Zgoda
+    nav:
+        toggle_navigation: Przełącz nawigację
+        theme:
+            toggle: Przełącz motyw
+            light: Jasny motyw
+            dark: Ciemny motyw
+            system: Motyw systemowy
+        profile:
+            name: Rafał Brauner
+        menu:
+            about: O mnie
+            experience: Doświadczenie
+            education: Edukacja
+            skills: Umiejętności
+            interests: Zainteresowania
+            awards_and_certificates: Nagrody i certyfikaty
+            contact: Kontakt
+    contact_form:
+        title: Skontaktuj się ze mną
+        description: Masz pytanie lub propozycję? Napisz do mnie!
+        name:
+            label: Imię i nazwisko
+            placeholder: Jan Kowalski
+            validation:
+                not_blank: Pole imię i nazwisko jest wymagane.
+                min_length: Imię i nazwisko musi mieć co najmniej 2 znaki.
+                max_length: Imię i nazwisko nie może przekraczać 100 znaków.
+        email:
+            label: Email
+            placeholder: jan.kowalski@example.com
+            validation:
+                not_blank: Pole email jest wymagane.
+                invalid: Podaj prawidłowy adres email.
+        message:
+            label: Wiadomość
+            placeholder: Twoja wiadomość...
+            validation:
+                not_blank: Pole wiadomość jest wymagane.
+                min_length: Wiadomość musi mieć co najmniej 10 znaków.
+                max_length: Wiadomość nie może przekraczać 5000 znaków.
+        submit: Wyślij wiadomość
+        success: Wiadomość została wysłana pomyślnie!
+        error: Wystąpił błąd podczas wysyłania wiadomości.
+    footer:
+        copyright: Wszystkie prawa zastrzeżone
+    social:
+        github: GitHub
+        linkedin: LinkedIn
+
+view:
+    about:
+        firstname: Rafał
+        lastname: Brauner
+        title: Backend Developer
+        city: Kraków
+        country: Polska
+        email: rafalbrauner@gmail.com
+        lead: ''
+        social:
+            url:
+                github: https://github.com/rbrauner
+                linkedin: https://www.linkedin.com/in/rbrauner
+    experience:
+        title: Doświadczenie
+        first:
+            title: Programista PHP
+            company: Apilo
+            from: Wrzesień 2024
+            to: Now
+        second:
+            title: Programista PHP
+            company: NoMonday
+            from: Październik 2019
+            to: Sierpień 2024
+        third:
+            title: Junior Programista PHP
+            company: NoMonday
+            from: Czerwiec 2018
+            to: Październik 2019
+    education:
+        title: Edukacja
+        first:
+            school: Uniwersytet Ekonomiczny w Katowicach
+            field_of_study: Magister na kierunku informatyki w specjalności programowanie
+                systemów inteligentnych
+            from: Październik 2022
+            to: Wrzesień 2024
+        second:
+            school: Politechnika Śląska
+            field_of_study: Inżynier na kierunku informatyki w specjalności bazy danych
+                i inżynieria systemów
+            from: Październik 2018
+            to: Marzec 2022
+        third:
+            school: Zespół Szkół Technicznych nr 1 im. Stanisława Staszica w Rybniku
+            field_of_study: Technik Informatyk
+            from: Wrzesień 2014
+            to: Czerwiec 2018
+    skills:
+        title: Umiejętności
+        languages:
+            title: Języki
+            php: PHP
+            sql_mysql: SQL, MySQL
+            java: Podstawy Java
+            python: Podstawy Python
+            postgresql_sqlite: Podstawy PostgreSQL, SQLite
+            html_css_sass_js: Podstawy HTML, CSS, Sass, JS
+        libraries:
+            title: Biblioteki
+            doctrine: Doctrine
+            bootstrap: Bootstrap
+        other:
+            title: Inne
+            elasticsearch: Elasticsearch
+            teamwork: Teamwork
+            web_applications_development: Tworzenie aplikacji webowych
+            problem_solving: Rozwiązywanie problemów
+        frameworks:
+            title: Frameworki
+            symfony: Symfony
+            zend_framework: Zend Framework
+            vuejs: Podstawy Vue.js
+            nuxtjs: Podstawy Nuxt.js
+        tools:
+            title: Narzędzia
+            phpstorm: PhpStorm
+            vscode: Visual Studio Code
+            docker: Docker
+            git: Git
+            composer: Composer
+            webpack: Webpack
+            github: Github
+            gitlab: Gitlab
+            jira: Jira
+    interests:
+        title: Zainteresowania
+        first: Moją pasją jest Backend Development, w którym czuję się jak ryba w wodzie. Projektowanie struktury kodu aplikacji, modelów bazy danych, a także utrzymywanie czystości kodu to rzeczy z którymi spotykam się na codzień. Interesuje mnie także tematyka z zakresu cyberbezpieczeństwa czy nowości technologicznych (nie związanych z programowaniem).
+        second: Kiedy nie programuję lubię wyruszać na długie, pełne przygód wycieczki rowerowe, jak i przemierzać górskie szlaki, a zimą szusować po stokach. Po za tym z chęcią obejrzę dobry film/serial, albo przeczytam książkę opowiadającą ciekawą historię fantasy.
+    awards_and_certificates:
+        title: Nagrody i certyfikaty
+        first: Warsztaty pt. "AWS Immersion Day" - Hostersi Rybnik (04.06.2024)
+        second: 'Szkolenie pt. "Specjalność Programista: Podstawy Javy" - Akademia Kodu (10.05.2020)'
+        third: 'Szkolenie pt. "Specjalność Programista: Podstawy Pythona" - Akademia Kodu (18.04.2020)'
+        fourth: Szkolenie pt. "Aplikacje webowe" - BlueSoft Rybnik (13.09.2017)

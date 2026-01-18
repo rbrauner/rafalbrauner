@@ -1,0 +1,115 @@
+<section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            {{ 'view.skills.title'|trans }}
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {# Languages #}
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+                        {{ 'view.skills.languages.title'|trans }}
+                    </h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">{{ 'view.skills.languages.php'|trans }}</span>
+                    <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">{{ 'view.skills.languages.sql_mysql'|trans }}</span>
+                    <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">{{ 'view.skills.languages.java'|trans }}</span>
+                    <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">{{ 'view.skills.languages.python'|trans }}</span>
+                    <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">{{ 'view.skills.languages.postgresql_sqlite'|trans }}</span>
+                    <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">{{ 'view.skills.languages.html_css_sass_js'|trans }}</span>
+                </div>
+            </div>
+
+            {# Frameworks #}
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+                        {{ 'view.skills.frameworks.title'|trans }}
+                    </h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">{{ 'view.skills.frameworks.symfony'|trans }}</span>
+                    <span class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">{{ 'view.skills.frameworks.zend_framework'|trans }}</span>
+                    <span class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">{{ 'view.skills.frameworks.vuejs'|trans }}</span>
+                    <span class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">{{ 'view.skills.frameworks.nuxtjs'|trans }}</span>
+                </div>
+            </div>
+
+            {# Libraries #}
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0 w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+                        {{ 'view.skills.libraries.title'|trans }}
+                    </h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">{{ 'view.skills.libraries.doctrine'|trans }}</span>
+                    <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">{{ 'view.skills.libraries.bootstrap'|trans }}</span>
+                </div>
+            </div>
+
+            {# Tools #}
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0 w-10 h-10 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+                        {{ 'view.skills.tools.title'|trans }}
+                    </h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.phpstorm'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.vscode'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.docker'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.git'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.composer'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.webpack'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.github'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.gitlab'|trans }}</span>
+                    <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">{{ 'view.skills.tools.jira'|trans }}</span>
+                </div>
+            </div>
+        </div>
+
+        {# Other Skills #}
+        <div class="mt-8 bg-white dark:bg-gray-900 rounded-xl shadow-md p-8">
+            <div class="flex items-center mb-6">
+                <div class="flex-shrink-0 w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+                    {{ 'view.skills.other.title'|trans }}
+                </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">{{ 'view.skills.other.elasticsearch'|trans }}</span>
+                <span class="px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">{{ 'view.skills.other.teamwork'|trans }}</span>
+                <span class="px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">{{ 'view.skills.other.web_applications_development'|trans }}</span>
+                <span class="px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">{{ 'view.skills.other.problem_solving'|trans }}</span>
+            </div>
+        </div>
+    </div>
+</section>
