@@ -138,8 +138,8 @@ view:
             git: Git
             composer: Composer
             webpack: Webpack
-            github: Github
-            gitlab: Gitlab
+            github: GitHub
+            gitlab: GitLab
             jira: Jira
     interests:
         title: Interests
