@@ -143,8 +143,8 @@ view:
             jira: Jira
     interests:
         title: Interests
-        first: My passion is the Backend Development, in which I feel like a fish in the water. Designing the structure of the application code, database models, as well as keeping code clean are things that I meet daily. I am also interested in topics in the field of cyber security or technological news (not related to programming).
-        second: When I am not programming I like to ride for a long, adventurous bicycle trips, as well as cross the mountain trails, and in winter I love skiing. Moreover I will gladly watch a good movie / series, or read a book telling an interesting fantasy story.
+        first: My passion is the Backend Development, in which I feel like a fish in water. Designing the structure of the application code, database models, as well as keeping code clean are things that I meet daily. I am also interested in topics in the field of cyber security or technological news (not related to programming).
+        second: When I am not programming I like to go on long, adventurous bicycle trips, as well as cross the mountain trails, and in winter I love skiing. Moreover I will gladly watch a good movie / series, or read a book telling an interesting fantasy story.
     awards_and_certificates:
         title: Awards and certificates
         first: Workshop named "AWS Immersion Day" - Hostersi Rybnik (04.06.2024)
