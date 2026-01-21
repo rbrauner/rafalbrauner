@@ -1,0 +1,37 @@
+<section id="interests" class="py-20 bg-white dark:bg-gray-900 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            {{ 'view.interests.title'|trans }}
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {# Interest 1 - Backend Development #}
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {{ 'view.interests.first'|trans }}
+                </p>
+            </div>
+
+            {# Interest 2 - Sports & Hobbies #}
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-green-600 dark:bg-green-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {{ 'view.interests.second'|trans }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

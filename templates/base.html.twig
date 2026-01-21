@@ -1,11 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ app.locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Rafał Brauner - Backend Developer{% endblock %}</title>
+    <title>{% block title %}{{ 'meta.title'|trans }}{% endblock %}</title>
+    <meta name="description" content="{{ 'meta.description'|trans }}">
+    <meta name="keywords" content="{{ 'meta.keywords'|trans }}">
+    <meta name="author" content="{{ 'meta.author'|trans }}">
 
-    <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/img/favicon/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicon/apple-touch-icon.png') }}" />
+    <meta name="apple-mobile-web-app-title" content="Rafał Brauner" />
+    <link rel="manifest" href="{{ asset('assets/img/favicon/site.webmanifest') }}" />
 
     {% block stylesheets %}
         {{ vite_entry_link_tags('app') }}
@@ -15,7 +23,25 @@
         {{ vite_entry_script_tags('app') }}
     {% endblock %}
 </head>
-<body>
-{% block body %}{% endblock %}
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+{% block body %}
+    {% block header %}
+        {% include 'components/header.html.twig' %}
+    {% endblock %}
+
+    {% block nav %}
+        {% include 'components/navbar.html.twig' %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block cookie_banner %}
+        {% include 'components/cookie_banner.html.twig' %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'components/footer.html.twig' %}
+    {% endblock %}
+{% endblock %}
 </body>
 </html>

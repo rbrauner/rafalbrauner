@@ -1,0 +1,85 @@
+<section id="contact" class="py-20 bg-white dark:bg-gray-900 transition-colors">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {# Section Header #}
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                {{ 'component.contact_form.title'|trans }}
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400">
+                {{ 'component.contact_form.description'|trans }}
+            </p>
+        </div>
+
+        {# Contact Form #}
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl p-8 transition-colors">
+            {{ form_start(contactForm, {'attr': {'id': 'contact-form', 'class': 'space-y-6'}}) }}
+                {# Name Field #}
+                <div>
+                    {{ form_label(contactForm.name, 'component.contact_form.name.label'|trans ~ ' <span class="text-red-500">*</span>', {
+                        'label_attr': {'class': 'block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'},
+                        'label_html': true
+                    }) }}
+                    {{ form_widget(contactForm.name, {
+                        'attr': {'placeholder': 'component.contact_form.name.placeholder'|trans}
+                    }) }}
+                    {{ form_errors(contactForm.name) }}
+                </div>
+
+                {# Email Field #}
+                <div>
+                    {{ form_label(contactForm.email, 'component.contact_form.email.label'|trans ~ ' <span class="text-red-500">*</span>', {
+                        'label_attr': {'class': 'block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'},
+                        'label_html': true
+                    }) }}
+                    {{ form_widget(contactForm.email, {
+                        'attr': {'placeholder': 'component.contact_form.email.placeholder'|trans}
+                    }) }}
+                    {{ form_errors(contactForm.email) }}
+                </div>
+
+                {# Message Field #}
+                <div>
+                    {{ form_label(contactForm.message, 'component.contact_form.message.label'|trans ~ ' <span class="text-red-500">*</span>', {
+                        'label_attr': {'class': 'block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'},
+                        'label_html': true
+                    }) }}
+                    {{ form_widget(contactForm.message, {
+                        'attr': {'placeholder': 'component.contact_form.message.placeholder'|trans}
+                    }) }}
+                    {{ form_errors(contactForm.message) }}
+                </div>
+
+                {# Submit Button #}
+                <div>
+                    <button type="submit"
+                            class="w-full flex items-center justify-center px-6 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none">
+                        <span>{{ 'component.contact_form.submit'|trans }}</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+            {{ form_end(contactForm) }}
+
+            {# Success Message #}
+            <div id="form-success" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-300 rounded-lg">
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{{ 'component.contact_form.success'|trans }}</span>
+                </div>
+            </div>
+
+            {# Error Message #}
+            <div id="form-error" class="hidden mt-6 p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-300 rounded-lg">
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{{ 'component.contact_form.error'|trans }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

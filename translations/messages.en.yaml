@@ -1,0 +1,153 @@
+meta:
+    title: Rafał Brauner - Backend Developer
+    description: Rafał Brauner - Backend Developer portfolio. PHP, Symfony, MySQL, Docker.
+    keywords: Backend Developer, PHP, Symfony, MySQL, Portfolio, Kraków
+    author: Rafał Brauner
+
+component:
+    cookies_banner:
+        text: This website uses cookies to provide services at the highest level. By continuing to use the site, you agree to their use.
+        button: Agree
+    nav:
+        toggle_navigation: Toggle navigation
+        theme:
+            toggle: Toggle theme
+            light: Light theme
+            dark: Dark theme
+            system: System theme
+        profile:
+            name: Rafał Brauner
+        menu:
+            about: About me
+            experience: Experience
+            education: Education
+            skills: Skills
+            interests: Interests
+            awards_and_certificates: Awards and certificates
+            contact: Contact
+    contact_form:
+        title: Get in touch
+        description: Have a question or proposal? Drop me a message!
+        name:
+            label: Full name
+            placeholder: John Doe
+            validation:
+                not_blank: The full name field is required.
+                min_length: Full name must be at least 2 characters long.
+                max_length: Full name cannot exceed 100 characters.
+        email:
+            label: Email
+            placeholder: john.doe@example.com
+            validation:
+                not_blank: The email field is required.
+                invalid: Please provide a valid email address.
+        message:
+            label: Message
+            placeholder: Your message...
+            validation:
+                not_blank: The message field is required.
+                min_length: Message must be at least 10 characters long.
+                max_length: Message cannot exceed 5000 characters.
+        submit: Send message
+        success: Message sent successfully!
+        error: An error occurred while sending the message.
+    footer:
+        copyright: All rights reserved
+    social:
+        github: GitHub
+        linkedin: LinkedIn
+
+view:
+    about:
+        firstname: Rafał
+        lastname: Brauner
+        title: Backend Developer
+        city: Cracow
+        country: Poland
+        email: rafalbrauner@gmail.com
+        lead: ''
+        social:
+            url:
+                github: https://github.com/rbrauner
+                linkedin: https://www.linkedin.com/in/rbrauner
+    experience:
+        title: Experience
+        first:
+            title: PHP Programmer
+            company: Apilo
+            from: September 2024
+            to: Now
+        second:
+            title: PHP Programmer
+            company: NoMonday
+            from: October 2019
+            to: August 2024
+        third:
+            title: Junior PHP Programmer
+            company: NoMonday
+            from: June 2018
+            to: October 2019
+    education:
+        title: Education
+        first:
+            school: University of Economics in Katowice
+            field_of_study: Master of Computer Science with major in programming of intelligent systems
+            from: October 2022
+            to: September 2024
+        second:
+            school: Silesian University of Technology
+            field_of_study: Bachelor of Computer Science with major in databases and systems engineering
+            from: October 2018
+            to: March 2022
+        third:
+            school: Technical School Complex No. 1 named after Stanisław Staszic in Rybnik
+            field_of_study: IT specialist
+            from: September 2014
+            to: June 2018
+    skills:
+        title: Skills
+        languages:
+            title: Languages
+            php: PHP
+            sql_mysql: SQL, MySQL
+            java: Basics of Java
+            python: Basics of Python
+            postgresql_sqlite: Basics of PostgreSQL, SQLite
+            html_css_sass_js: Basics of HTML, CSS, Sass, JS
+        libraries:
+            title: Libraries
+            doctrine: Doctrine
+            bootstrap: Bootstrap
+        other:
+            title: Other
+            elasticsearch: Elasticsearch
+            teamwork: Teamwork
+            web_applications_development: Web applications development
+            problem_solving: Problem solving
+        frameworks:
+            title: Frameworks
+            symfony: Symfony
+            zend_framework: Zend Framework / Laminas
+            vuejs: Basics of Vue.js
+            nuxtjs: Basics of Nuxt.js
+        tools:
+            title: Tools
+            phpstorm: PhpStorm
+            vscode: Visual Studio Code
+            docker: Docker
+            git: Git
+            composer: Composer
+            webpack: Webpack
+            github: GitHub
+            gitlab: GitLab
+            jira: Jira
+    interests:
+        title: Interests
+        first: My passion is the Backend Development, in which I feel like a fish in water. Designing the structure of the application code, database models, as well as keeping code clean are things that I meet daily. I am also interested in topics in the field of cyber security or technological news (not related to programming).
+        second: When I am not programming I like to go on long, adventurous bicycle trips, as well as cross the mountain trails, and in winter I love skiing. Moreover I will gladly watch a good movie / series, or read a book telling an interesting fantasy story.
+    awards_and_certificates:
+        title: Awards and certificates
+        first: Workshop named "AWS Immersion Day" - Hostersi Rybnik (04.06.2024)
+        second: 'Training named "Specjalność Programista: Podstawy Javy" - Akademia Kodu (10.05.2020)'
+        third: 'Training named "Specjalność Programista: Podstawy Pythona" - Akademia Kodu (18.04.2020)'
+        fourth: Training named "Aplikacje webowe" - BlueSoft Rybnik (13.09.2017)
