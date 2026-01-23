@@ -4,7 +4,7 @@
 
 ### Tools versions
 
-- PHP ^8.4
+- PHP ^8.5
 - PHP extensions (install all to satisfy `symfony check:requirements`)
 - Composer ^2
 
@@ -37,7 +37,7 @@ docker compose stop
 ### Useful commands
 
 - `docker compose start` - start containers
-- `docker compose stop` - start containers
+- `docker compose stop` - stop containers
 - `just --list` - list tasks
 
 ## Prod
