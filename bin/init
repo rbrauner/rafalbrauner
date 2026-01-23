@@ -1,11 +1,17 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
+/**
+ * Copyright (C) Rafał Brauner
+ */
+
 $env = getenv('ENV') ?: 'dev';
 
-if ($env === 'dev') {
+if ('dev' === $env) {
     echo "> Initializing dev environment...\n";
-    echo "> Press Enter to continue...";
+    echo '> Press Enter to continue...';
     fgets(STDIN);
 
     if (!file_exists('.env')) {
@@ -22,7 +28,7 @@ if ($env === 'dev') {
         echo "> \"compose.yaml\" file already exists. Skipping creation...\n";
     }
 
-    echo "> Check the created files + create docker network (ex. \"docker network create main\") and press Enter to continue...";
+    echo '> Check the created files + create docker network (ex. "docker network create main") and press Enter to continue...';
     fgets(STDIN);
 
     echo "> Starting Docker containers...\n";
@@ -31,17 +37,18 @@ if ($env === 'dev') {
     echo "> Installing PHP dependencies using Composer...\n";
     exec('docker compose exec -it php bash -c "composer install"');
 
-    echo "> Creating database, running migrations and loading fixtures...\n";
-    exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:database:create --if-not-exists"');
-    exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"');
-    exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"');
+    // echo "> Creating database, running migrations and loading fixtures...\n";
+    // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:database:create --if-not-exists"');
+    // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:migrations:migrate --no-interaction"');
+    // exec('docker compose exec -it php bash -c "php -d memory_limit=-1 bin/console doctrine:fixtures:load --append --no-interaction"');
 
     echo "> Dev environment initialized successfully!\n";
-} elseif ($env === 'prod') {
+} elseif ('prod' === $env) {
     echo "> Initializing prod environment...\n";
-    echo "> Nothing to do...";
+    echo '> Nothing to do...';
     echo "> Prod environment initialized successfully!\n";
 } else {
-    echo "> Unknown environment: $env\n";
+    echo "> Unknown environment: {$env}\n";
+
     exit(1);
 }

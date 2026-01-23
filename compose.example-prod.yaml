@@ -44,7 +44,7 @@ services:
             network: host
             args:
                 TZ: ${TZ:-Europe/Warsaw}
-                USER: ${USER:-app}
+                USER: ${APP_USER:-app}
                 GROUP: ${GROUP:-app}
                 UID: ${UID:-1000}
                 GID: ${GID:-1000}
