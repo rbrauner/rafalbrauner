@@ -21,11 +21,11 @@ return [
     FrameworkBundle::class => ['all' => true],
     MakerBundle::class => ['dev' => true],
     TwigBundle::class => ['all' => true],
-    WebProfilerBundle::class => ['dev' => true, 'test' => true],
     DoctrineBundle::class => ['all' => true],
     DoctrineMigrationsBundle::class => ['all' => true],
     PentatrionViteBundle::class => ['all' => true],
     MonologBundle::class => ['all' => true],
     DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
     DebugBundle::class => ['dev' => true],
+    WebProfilerBundle::class => ['dev' => true, 'test' => true],
 ];
