@@ -57,6 +57,19 @@ component:
         github: GitHub
         linkedin: LinkedIn
 
+email:
+    contact_form:
+        subject: Nowa wiadomość z formularza kontaktowego
+        title: Nowa wiadomość z formularza kontaktowego
+        footer: Ta wiadomość została wysłana z formularza kontaktowego na stronie rafalbrauner.com
+    contact_form_confirmation:
+        subject: Potwierdzenie otrzymania wiadomości
+        title: Dzięki za wiadomość!
+        greeting: Cześć %name%!
+        message: Dzięki za skontaktowanie się ze mną. Otrzymałem Twoją wiadomość i postaram się jak najszybciej do Ciebie odezwać. 😄
+        signature: Pozdrawiam
+        footer: To jest automatyczna wiadomość potwierdzająca. Jeśli nie wysyłałeś/aś wiadomości przez formularz kontaktowy, możesz zignorować ten email.
+
 view:
     about:
         firstname: Rafał

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ 'email.contact_form.subject'|trans }}</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #2563eb;">{{ 'email.contact_form.title'|trans }}</h2>
+
+    <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <p style="margin: 10px 0;">
+            <strong>{{ 'component.contact_form.name.label'|trans }}:</strong><br>
+            {{ data.name }}
+        </p>
+
+        <p style="margin: 10px 0;">
+            <strong>{{ 'component.contact_form.email.label'|trans }}:</strong><br>
+            <a href="mailto:{{ data.email }}" style="color: #2563eb;">{{ data.email }}</a>
+        </p>
+
+        <p style="margin: 10px 0;">
+            <strong>{{ 'component.contact_form.message.label'|trans }}:</strong><br>
+            {{ data.message|nl2br }}
+        </p>
+    </div>
+
+    <p style="color: #6b7280; font-size: 0.875rem; margin-top: 30px;">
+        {{ 'email.contact_form.footer'|trans }}
+    </p>
+</div>
+</body>
+</html>

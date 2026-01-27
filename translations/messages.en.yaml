@@ -57,6 +57,19 @@ component:
         github: GitHub
         linkedin: LinkedIn
 
+email:
+    contact_form:
+        subject: New message from contact form
+        title: New message from contact form
+        footer: This message was sent from the contact form on rafalbrauner.com
+    contact_form_confirmation:
+        subject: Message received confirmation
+        title: Thank you for your message!
+        greeting: Hi %name%!
+        message: Thanks for contacting me. I received your message and I will try to respond you as soon as possible. 😄
+        signature: Best regards
+        footer: This is an automatic confirmation message. If you did not send a message through the contact form, you can ignore this email.
+
 view:
     about:
         firstname: Rafał
