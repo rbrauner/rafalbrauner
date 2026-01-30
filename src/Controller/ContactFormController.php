@@ -42,7 +42,7 @@ final class ContactFormController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             try {
                 // Email to website owner with contact form data
-                $emailToOwner = (new TemplatedEmail())
+                $emailToOwner = new TemplatedEmail()
                     ->from($this->mailerEmail)
                     ->to($this->contactEmail)
                     ->subject($this->translator->trans('email.contact_form.subject'))
@@ -54,7 +54,7 @@ final class ContactFormController extends AbstractController
                 $this->mailer->send($emailToOwner);
 
                 // Confirmation email to sender
-                $emailToSender = (new TemplatedEmail())
+                $emailToSender = new TemplatedEmail()
                     ->from($this->mailerEmail)
                     ->to($contactFormData->email)
                     ->subject($this->translator->trans('email.contact_form_confirmation.subject'))
