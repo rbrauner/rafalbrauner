@@ -28,7 +28,7 @@ if ('dev' === $env) {
         echo "> \"compose.yaml\" file already exists. Skipping creation...\n";
     }
 
-    echo '> Check the created files + create docker network (ex. "docker network create main") and press Enter to continue...';
+    echo '> Check the created files + create docker network (ex. "docker network create shared-network") and press Enter to continue...';
     fgets(STDIN);
 
     echo "> Starting Docker containers...\n";
